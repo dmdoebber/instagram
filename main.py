@@ -14,8 +14,8 @@ following = cl.user_following(str(cl.user_id))
 print('[', datetime.datetime.now(), '] fetching followers...')
 followers = cl.user_followers(str(cl.user_id))
 
-following_ids = set(y.pk for x, y in following.items())
-followers_ids = set(y.pk for x, y in followers.items())
+following_ids = set(y.pk for _, y in following.items())
+followers_ids = set(y.pk for _, y in followers.items())
 
 not_following_me_back = following_ids.difference(followers_ids)
 im_not_following_back = followers_ids.difference(following_ids)
