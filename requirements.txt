@@ -1,0 +1,3 @@
+instagrapi
+prettytable
+pillow
